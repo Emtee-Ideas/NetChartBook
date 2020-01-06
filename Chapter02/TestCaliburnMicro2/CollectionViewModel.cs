@@ -17,7 +17,7 @@ namespace TestCaliburnMicro2
     [ImportingConstructor]
     public CollectionViewModel(IEventAggregator events)
     {
-      events = events;
+      _events = events;
       dataCollection = new BindableCollection<DataModel>();
       GetInitialData();
     }
@@ -120,7 +120,7 @@ namespace TestCaliburnMicro2
 				Volume = 31535500
 			});
 			count++;
-			_events.BeginPublishOnUIThread(new ModelEvent(string.Format("AAPL {{0}} just Added to the stock list.", count)));
+			_events.BeginPublishOnUIThread(new ModelEvent(string.Format("AAPL {0} just Added to the stock list.", count)));
 		}
   }
 }

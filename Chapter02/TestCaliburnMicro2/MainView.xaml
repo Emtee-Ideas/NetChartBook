@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestCaliburnMicro2"
         mc:Ignorable="d"
-        Title="MainView" Height="400" Width="700">
+        Title="Test Caliburn.Micro 2" Height="400" Width="700">
   <Grid Margin="10">
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="200"/>
