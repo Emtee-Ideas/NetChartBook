@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Chapter02.Views.CallerInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Chapter02.Views"
+             xmlns:model="clr-namespace:Chapter02.Models"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <model:CallerInfoViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Ticker" Width="80"/>
+                <TextBox Text="{Binding Ticker}" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Date" Width="80"/>
+                <TextBox Text="{Binding Date, StringFormat=d}" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Open Price" Width="80"/>
+                <TextBox Text="{Binding PriceOpen}" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="High Price" Width="80"/>
+                <TextBox Text="{Binding PriceHigh}" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Low Price" Width="80"/>
+                <TextBox Text="{Binding PriceLow}" Width="80"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Close Price" Width="80"/>
+                <TextBox Text="{Binding PriceClose}" Width="80"/>
+            </StackPanel>
+            <Button x:Name="btnUpdate" Content="Update"
+                    Width="100" Height="25" Margin="30 20 0 0"
+                    HorizontalAlignment="Left" Command="{Binding UpdateStock}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,56 @@
+﻿<Window x:Class="Chapter02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chapter02"
+        xmlns:view="clr-namespace:Chapter02.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="10 0 10 0">
+        <TabControl Margin="0 5 0 0">
+            <TabItem Header="WrongWay">
+                <view:WrongWayView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="RightWay">
+                <view:RightWayView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="OnCommand">
+                <view:OnCommandView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="Lambda">
+                <view:LambdaView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="CallerInfo">
+                <view:CallerInfoView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="MvvmBase">
+                <view:MvvmBaseView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+            <TabItem Header="Collection">
+                <view:CollectionView HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Height="Auto"
+                                   Width="Auto"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
